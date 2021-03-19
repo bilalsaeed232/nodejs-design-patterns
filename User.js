@@ -42,6 +42,17 @@ class User {
   set allowedWoringHoursPerWeek(value) {
     this._allowedWoringHoursPerWeek = value;
   }
+
+  clone() {
+    let proto = Object.getPrototypeOf(this);
+    let cloned = Object.create(proto);
+    cloned._name = this._name;
+    cloned._taxClass = this._taxClass;
+    cloned._occupation = this._occupation;
+    cloned._allowedWoringHoursPerWeek = this._allowedWoringHoursPerWeek;
+
+    return cloned;
+  }
 }
 
 module.exports = User;
