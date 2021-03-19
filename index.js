@@ -1,8 +1,8 @@
 //entry point file...
-const Pizza = require("./Pizza");
+const PizzaBuilder = require("./Pizza");
 
-const smallPizza = new Pizza("small", true, true, false); // <---- these parameters doesn't give any information about the property
-const largePizza = new Pizza("large", false, false, true);
+const smallPizza = new PizzaBuilder("small").addPepperoni().addCheese().build();
+const largePizza = new PizzaBuilder("large").addBacon().build();
 
 console.log(smallPizza);
 console.log(largePizza);
