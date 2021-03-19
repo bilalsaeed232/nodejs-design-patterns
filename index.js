@@ -1,10 +1,9 @@
 //entry point file...
 
-const Car = require("./Car");
-const InsuredCar = require("./InsuredCar");
+const carFactory = require("./carFactory");
 
-const car = new Car("Suzuki", "vxr");
-const insuredCar = new InsuredCar("Honda", "civic", "ADAC");
+const car = carFactory("Suzuki", "vxr");
+const insuredCar = carFactory("Honda", "civic", "insured", "ADAC");
 
 console.log("🐭", car);
 console.log("🐯", insuredCar);
