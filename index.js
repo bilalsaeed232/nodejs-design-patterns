@@ -1,4 +1,6 @@
 //entry point file...
+const localStorage = require("./localStorage");
+
 console.log("localStorage length:", localStorage.length);
 
 let uid = localStorage.getItem("user_id");
