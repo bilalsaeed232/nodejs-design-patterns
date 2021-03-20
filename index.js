@@ -1,6 +1,8 @@
 //entry point file...
 const path = require("path");
-const fs = require("fs"); // <==== expensive object
+const FS_PROXY = require("./FS_PROXY");
+
+const fs = new FS_PROXY(require("fs"));
 
 let txtFile = path.join(__dirname, "Readme.txt");
 let mdFile = path.join(__dirname, "Readme.md");
@@ -16,5 +18,5 @@ let result = (error, content) => {
   console.log(content);
 };
 
-fs.readFile(txtFile, "UTF-8", result);
+// fs.readFile(txtFile, "UTF-8", result);
 fs.readFile(mdFile, "UTF-8", result);
