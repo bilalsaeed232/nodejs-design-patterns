@@ -2,8 +2,8 @@ const Mall = require("./Mall");
 const Shopper = require("./Shopper");
 const Store = require("./Store");
 
-let shoeStore = new Store("Shoes");
-let dogFoodStore = new Store("Dog bites");
+let shoeStore = new Store("Shoes Store");
+let dogFoodStore = new Store("Dog bites Store");
 
 let adam = new Shopper("Adam");
 let sandy = new Shopper("Sandy");
