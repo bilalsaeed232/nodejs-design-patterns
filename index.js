@@ -4,7 +4,7 @@ logger.log("hello");
 logger.log("hi");
 logger.log("salam");
 
-// TODO: change this logging strategy somehow to save to file
+// logger.changeStrategy("toFile");
 
 logger.log("bye");
 logger.log("tata");
